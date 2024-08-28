@@ -1,20 +1,24 @@
 public class ReprodutorMusical {
-    private String currentTrack;
+    private String musica;
+
+    public void selecionarMusica(String musica) {
+        this.musica = musica;
+        System.out.println("Música selecionada: " + musica);
+    }
 
     public void tocar() {
-        System.out.println("Tocando a música: " + currentTrack);
+        if (musica != null) {
+            System.out.println("Tocando música: " + musica);
+        } else {
+            System.out.println("Nenhuma música selecionada.");
+        }
     }
 
     public void pausar() {
-        System.out.println("Música pausada.");
-    }
-
-    public void selecionarMusica(String musica) {
-        this.currentTrack = musica;
-        System.out.println("Música selecionada: " + currentTrack);
-    }
-
-    public String getCurrentTrack() {
-        return currentTrack;
+        if (musica != null) {
+            System.out.println("Música pausada: " + musica);
+        } else {
+            System.out.println("Nenhuma música para pausar.");
+        }
     }
 }

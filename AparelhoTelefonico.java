@@ -1,13 +1,10 @@
 public class AparelhoTelefonico {
-    private String numeroAtual;
-
     public void ligar(String numero) {
-        this.numeroAtual = numero;
-        System.out.println("Ligando para: " + numeroAtual);
+        System.out.println("Ligando para: " + numero);
     }
 
     public void atender() {
-        System.out.println("Atendendo chamada...");
+        System.out.println("Chamada atendida.");
     }
 
     public void iniciarCorreioVoz() {
